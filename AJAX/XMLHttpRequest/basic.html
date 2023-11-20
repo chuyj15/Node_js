@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest</title>
+</head>
+<body>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                console.log(xhr.responseText);
+                } else {
+                console.error('Request failed with status:', xhr.status);
+                }
+            }
+        };
+        var url = 'https://httpbin.org/get'
+        xhr.open('GET', url, true);
+        xhr.send();
+    </script>
+</body>
+</html>
