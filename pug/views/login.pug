@@ -1,0 +1,15 @@
+extends layout 
+block content
+    div.container
+        h2 Login
+        //질문 form 태그에 뭐.. action 같은게 없네..? 자동적으로 해주는 건가
+        form 
+            div.form-group
+                label(for="username") Username:
+                input(type="text", id="username", name="username", required)
+            div.form-group
+                label(for="password") Password:
+                input(type="text", id="password", name="password", required)
+            div.form-group
+                button.btn(type="submit") Login
+                a.btn(href="/join") Sign Up

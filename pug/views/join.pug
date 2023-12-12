@@ -1,0 +1,16 @@
+extends layout
+block content
+    div.container
+        h2 Sign Up
+        form
+            div.form-group
+                label(for="username") Username : 
+                input(type="text", id="username", name="username", required)
+            div.form-group
+                label(for="email") email : 
+                input(type="text", id="email", name="email", required)
+            div.form-group
+                label(for="password") password: 
+                input(type="text", id="password", name="password", required)
+            div.form-group
+                button.btn(type="submit") Sign Up
